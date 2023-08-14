@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: ouve
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-abzw-tenant/byoc-app-mauz/ouve@sha256:2e9d7623afd0848141ddccf3099e61a1c7f5822e0d3d9c52d4858915d52e41ef
         name: my-java-quarkus
         ports:
         - containerPort: 8081
