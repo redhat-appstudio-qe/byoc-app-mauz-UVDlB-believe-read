@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: ouve
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: ouve
+    app.kubernetes.io/part-of: byoc-app-mauz
+  name: ouve
+spec:
+  rules:
+  - host: ouve-byoc-abzw-tenant.apps.b6dc9316dcb54e2228f8.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: ouve
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: ouve
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-abzw-tenant/byoc-app-mauz/ouve@sha256:2e9d7623afd0848141ddccf3099e61a1c7f5822e0d3d9c52d4858915d52e41ef
+        name: my-java-quarkus
+        resources: {}
+status: {}
